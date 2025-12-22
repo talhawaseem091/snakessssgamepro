@@ -16,8 +16,16 @@ Vercel needs a `vercel.json` file to understand how to handle your project. I ha
 1. Go to [Vercel.com](https://vercel.com) and log in.
 2. Click **"Add New..."** then **"Project"**.
 3. Import your GitHub repository.
-4. **Important:** In the "Build and Output Settings", leave them as default. Vercel will use the `vercel.json` instructions.
+4. **IMPORTANT - Framework Override:** 
+   - Vercel might automatically detect this as a "Vite" project.
+   - Look for **"Framework Preset"** and change it to **"Other"**.
+   - Under **"Build and Output Settings"**, make sure:
+     - **Build Command** is empty (or just `true`).
+     - **Output Directory** is empty.
+     - **Install Command** is empty.
 5. Click **"Deploy"**.
+
+Vercel will now use our `vercel.json` instructions instead of trying to build a Vite frontend.
 
 ### Step 4: Add Environment Variables (If needed)
 If your backend needs a database (like the one we set up), go to the **Settings > Environment Variables** tab in your Vercel project and add your `DATABASE_URL`.
