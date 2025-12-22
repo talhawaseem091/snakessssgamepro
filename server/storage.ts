@@ -9,10 +9,15 @@ export interface IStorage {
 
 export class DatabaseStorage implements IStorage {
   async getHighScores(): Promise<Score[]> {
-    return await db.select()
-      .from(scores)
-      .orderBy(desc(scores.score))
-      .limit(10);
+    try {
+      return await db.select()
+        .from(scores)
+        .orderBy(desc(scores.score))
+        .limit(10);
+    } catch (e) {
+      console.error("Database not ready yet", e);
+      return [];
+    }
   }
 
   async createScore(score: InsertScore): Promise<Score> {
