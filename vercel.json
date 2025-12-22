@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "main.cpp",
-      "use": "vercel-node-cpp"
+      "use": "now-cpp"
     }
   ],
   "routes": [
