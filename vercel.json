@@ -3,17 +3,13 @@
   "builds": [
     {
       "src": "main.cpp",
-      "use": "vercel-cpp"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "use": "vercel-node-cpp"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/main.cpp"
     }
   ]
 }
