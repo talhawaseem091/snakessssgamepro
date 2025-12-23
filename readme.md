@@ -13,8 +13,6 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Architecture
 - **Framework**:TypeScript
 - **Styling**: Tailwind CSS with custom retro arcade theme (neon green, dark backgrounds, sharp corners)
-- **Animations**: Framer Motion for smooth modal and UI transitions
-- **Build Tool**: Vite with React plugin and custom Replit development plugins
 
 ### Backend Architecture
 
